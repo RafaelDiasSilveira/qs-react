@@ -4,6 +4,7 @@ node_js:
   - "stable"
 
 cache:
+  yarn: true
   directories:
   - node_modules
 
