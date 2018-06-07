@@ -11,6 +11,7 @@
   "collectCoverage": true,
   "collectCoverageFrom": [
     "**/src/**/*.{js,jsx}",
+    "!**/src/**/app.{js,jsx}",
     "!**/node_modules/**",
     "!**/public/**"
   ],

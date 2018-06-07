@@ -3,4 +3,11 @@ import ReacDOM from 'react-dom';
 
 const root = document.getElementById('app');
 
-ReacDOM.render(<h1>QS React</h1>, root);
+const jsx = (
+  <div>
+    <h1>QS React</h1>
+  </div>
+);
+
+ReacDOM.render(jsx, root);
+

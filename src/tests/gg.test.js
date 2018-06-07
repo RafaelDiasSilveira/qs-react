@@ -1,6 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-
-test('should render base correctly', () => {
+test('teste do GG', () => {
   expect(1).toBe(1);
 });
