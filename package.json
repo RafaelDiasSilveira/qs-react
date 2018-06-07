@@ -11,7 +11,7 @@
     "dev-server": "webpack-dev-server",
     "test": "jest --config=jest.config.json",
     "test-watch": "jest --watchAll --config=jest.config.json",
-    "linter": "eslint -c .eslintrc.js --ignore-path .eslintignore --ext .js,.jsx src",
+    "linter": "eslint -c .eslintrc.js --ignore-path .eslintignore --ext .js,.jsx src --fix",
     "heroku-postbuild": "yarn run build:prod",
     "start": "node server/server.js"
   },

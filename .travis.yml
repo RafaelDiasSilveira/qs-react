@@ -14,4 +14,5 @@ before_install:
 
 script:
   - yarn install
+  - yarn run linter
   - yarn run build:prod

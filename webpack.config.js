@@ -8,7 +8,6 @@ module.exports = (env) => {
   return {
     mode: 'development',
     entry: './src/app.jsx',
-    // entry: './src/playground/hoc.js',
     output: {
       path: path.join(__dirname, 'public', 'dist'),
       filename: 'bundle.js',
@@ -18,15 +17,15 @@ module.exports = (env) => {
     },
     module: {
       rules: [
-        // {
-        //   enforce: 'pre',
-        //   loader: 'eslint-loader',
-        //   test: /\.jsx?$/,
-        //   exclude: /node_modules/,
-        //   options: {
-        //     fix: true,
-        //   },
-        // },
+        {
+          enforce: 'pre',
+          loader: 'eslint-loader',
+          test: /\.jsx?$/,
+          exclude: /node_modules/,
+          options: {
+            fix: true,
+          },
+        },
         {
           test: /\.jsx?$/,
           exclude: /node_modules/,
