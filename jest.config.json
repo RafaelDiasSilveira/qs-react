@@ -7,5 +7,15 @@
   "moduleNameMapper": {
     "\\.(css|less)$": "<rootDir>/src/tests/__mocks__/styleMock.js",
     "\\moment$": "<rootDir>/src/tests/__mocks__/momentMock.js"
-    }
+  },
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/src/**/*.{js,jsx}",
+    "!**/node_modules/**",
+    "!**/public/**"
+  ],
+  "coverageReporters": [
+    "lcov",
+    "text"
+  ]
 }

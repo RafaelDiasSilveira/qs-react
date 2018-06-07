@@ -9,13 +9,14 @@
     "build:prod": "webpack -p --env production",
     "build:dev": "webpack",
     "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json",
+    "test": "jest --config=jest.config.json && cat ./coverage/lcov.info | coveralls",
     "test-watch": "jest --watchAll --config=jest.config.json",
     "linter": "eslint -c .eslintrc.js --ignore-path .eslintignore --ext .js,.jsx src --fix",
     "heroku-postbuild": "yarn run build:prod",
     "start": "node server/server.js"
   },
   "devDependencies": {
+    "coveralls": "^3.0.1",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "enzyme-to-json": "3.3.4",
