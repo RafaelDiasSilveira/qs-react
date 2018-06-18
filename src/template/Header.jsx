@@ -17,6 +17,7 @@ const Header = () => (
       <span className="navbar-toggler-icon" />
     </button>
 
+
     <div className="collapse navbar-collapse" id="navbarText">
 
       <ul className="navbar-nav mr-auto">
@@ -30,7 +31,14 @@ const Header = () => (
           <NavLink className="nav-link" to="/books" exact>Livros</NavLink>
         </li>
       </ul>
+
     </div>
+
+    <form className="form-inline">
+      <input type="search" className="form-control mr-sm-2" placeholder="Search" aria-label="Search" />
+      <button className="btn btn-success my-2 my-sm-0" type="submit">Pesquisar</button>
+    </form>
+
   </nav>
 );
 
