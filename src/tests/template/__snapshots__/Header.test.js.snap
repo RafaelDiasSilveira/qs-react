@@ -71,6 +71,108 @@ exports[`deve renderizar Header corretamente 1`] = `
           Livros
         </NavLink>
       </li>
+      <li
+        activeClassName="active"
+      >
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          exact={true}
+          to="/profile"
+        >
+          Meu Perfil
+        </NavLink>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`should render Header correctly 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-dark bg-primary"
+>
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    className="navbar-brand"
+    to="/"
+  >
+    QS-React
+  </NavLink>
+  <button
+    aria-controls="navbarText"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    className="navbar-toggler"
+    data-target="#navbarText"
+    data-toggle="collapse"
+    type="button"
+  >
+    <span
+      className="navbar-toggler-icon"
+    />
+  </button>
+  <div
+    className="collapse navbar-collapse"
+    id="navbarText"
+  >
+    <ul
+      className="navbar-nav mr-auto"
+    >
+      <li
+        activeClassName="active"
+      >
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          exact={true}
+          to="/"
+        >
+          Home
+        </NavLink>
+      </li>
+      <li
+        activeClassName="active"
+      >
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          exact={true}
+          to="/users"
+        >
+          Usuários
+        </NavLink>
+      </li>
+      <li
+        activeClassName="active"
+      >
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          exact={true}
+          to="/books"
+        >
+          Livros
+        </NavLink>
+      </li>
+      <li
+        activeClassName="active"
+      >
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          exact={true}
+          to="/profile"
+        >
+          Meu Perfil
+        </NavLink>
+      </li>
     </ul>
   </div>
 </nav>

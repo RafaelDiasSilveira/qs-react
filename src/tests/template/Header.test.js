@@ -9,12 +9,12 @@ beforeAll(() => {
   wrapper = shallow(<Header />);
 });
 
-test('deve renderizar Header corretamente', () => {
+test('should render Header correctly', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test('deve contar a quantidade correta de links', () => {
+test('should contain the correct amount of links', () => {
   const result = wrapper.find('NavLink')
 
-  expect(result).toHaveLength(4);
+  expect(result).toHaveLength(5);
 });
