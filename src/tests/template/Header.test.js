@@ -14,7 +14,6 @@ test('deve renderizar Header corretamente', () => {
 });
 
 test('deve contar a quantidade correta de links', () => {
-  const wrapper = shallow(<Header />);
   const result = wrapper.find('NavLink')
 
   expect(result).toHaveLength(4);
