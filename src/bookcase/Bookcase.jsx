@@ -10,14 +10,4 @@ const Bookcase = () => (
   </div>
 );
 
-// class Dashboard extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         teste
-//       </div>
-//     );
-//   }
-// };
-
 export default Bookcase;

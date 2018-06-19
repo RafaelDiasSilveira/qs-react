@@ -4,21 +4,24 @@ import { shallow } from "enzyme";
 import BookForm from '../../book/BookForm';
 import { books } from "../fixtures/fixtures";
 
-test('should render BookForm correctly with data', () => {
-  const wrapper = shallow(
-    <BookForm
-      book={books[0]}
-    />
-  );
+describe('should render BookForm correctly', () => {
+  test('with data', () => {
+    const wrapper = shallow(
+      <BookForm
+        book={books[0]}
+      />
+    );
 
-  expect(wrapper).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('without data', () => {
+    const wrapper = shallow(<BookForm />);
+
+    expect(wrapper).toMatchSnapshot();
+  });
 });
 
-test('should render BookForm correctly without data', () => {
-  const wrapper = shallow(<BookForm />);
-
-  expect(wrapper).toMatchSnapshot();
-});
 
 test('should set titulo state on input change', () => {
   const value = 'Teste do GG';
