@@ -3,7 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a className="navbar-brand" href="/">Navbar </a>
+    <NavLink className="navbar-brand" to="/" >
+      QS-React
+    </NavLink>
 
     <button
       className="navbar-toggler"
@@ -33,11 +35,6 @@ const Header = () => (
       </ul>
 
     </div>
-
-    <form className="form-inline">
-      <input type="search" className="form-control mr-sm-2" placeholder="Search" aria-label="Search" />
-      <button className="btn btn-success my-2 my-sm-0" type="submit">Pesquisar</button>
-    </form>
 
   </nav>
 );
