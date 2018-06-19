@@ -42,7 +42,7 @@ exports[`should render Header correctly 1`] = `
           exact={true}
           to="/"
         >
-          Home
+          Estante
         </NavLink>
       </li>
       <li

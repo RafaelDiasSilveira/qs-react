@@ -1,10 +1,13 @@
 import React from 'react';
 
 import Header from './BookcaseHeader';
-
+import Navigation from './BookcaseNavigation';
 
 const Bookcase = () => (
-  <Header />
+  <div>
+    <Header />
+    <Navigation />
+  </div>
 );
 
 // class Dashboard extends React.Component {

@@ -24,6 +24,18 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+SF:/home/rafael/Documents/Programas/React/qs-react/src/bookcase/BookcaseNavigation.jsx
+FN:3,(anonymous_0)
+FNF:1
+FNH:1
+FNDA:1,(anonymous_0)
+DA:4,1
+LF:1
+LH:1
+BRF:0
+BRH:0
+end_of_record
+TN:
 SF:/home/rafael/Documents/Programas/React/qs-react/src/routes/AppRouter.jsx
 FN:7,(anonymous_0)
 FNF:1
@@ -67,7 +79,7 @@ TN:
 SF:/home/rafael/Documents/Programas/React/qs-react/src/tests/setupTests.js
 FNF:0
 FNH:0
-DA:4,4
+DA:4,5
 LF:1
 LH:1
 BRF:0
