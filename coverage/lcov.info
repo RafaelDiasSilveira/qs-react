@@ -1,5 +1,5 @@
 TN:
-SF:/home/rafael/Documents/Programas/React/qs-react/src/dashboard/Dashboard.jsx
+SF:/home/rafael/Documents/Programas/React/qs-react/src/bookcase/Bookcase.jsx
 FN:6,(anonymous_0)
 FNF:1
 FNH:0
@@ -12,7 +12,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/rafael/Documents/Programas/React/qs-react/src/dashboard/DashboardHeader.jsx
+SF:/home/rafael/Documents/Programas/React/qs-react/src/bookcase/BookcaseHeader.jsx
 FN:3,(anonymous_0)
 FNF:1
 FNH:1

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Header from '../template/Header';
-import Dashboard from '../dashboard/Dashboard';
+import Bookcase from '../bookcase/Bookcase';
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -16,7 +16,7 @@ const AppRouter = () => (
             <Switch>
               <Route
                 path="/"
-                component={Dashboard}
+                component={Bookcase}
                 exact
               />
             </Switch>

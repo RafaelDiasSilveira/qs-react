@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Header from './DashboardHeader';
+import Header from './BookcaseHeader';
 
 
-const Dashboard = () => (
+const Bookcase = () => (
   <Header />
 );
 
@@ -17,4 +17,4 @@ const Dashboard = () => (
 //   }
 // };
 
-export default Dashboard;
+export default Bookcase;
