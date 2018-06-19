@@ -4,6 +4,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from '../template/Header';
 import Bookcase from '../bookcase/Bookcase';
 
+import BookForm from '../book/BookForm';
+
 const AppRouter = () => (
   <BrowserRouter>
     <div>
@@ -18,6 +20,11 @@ const AppRouter = () => (
                 path="/"
                 component={Bookcase}
                 exact
+              />
+
+              <Route
+                path-="/book/new"
+                component={BookForm}
               />
             </Switch>
 

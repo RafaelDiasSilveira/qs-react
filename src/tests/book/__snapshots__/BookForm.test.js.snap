@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render BookForm correctly with data 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Titulo"
+      type="text"
+      value="Livro 1"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Autor"
+      type="text"
+      value="Autor 1"
+    />
+  </form>
+</div>
+`;
+
+exports[`should render BookForm correctly without data 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Titulo"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Autor"
+      type="text"
+      value=""
+    />
+  </form>
+</div>
+`;
