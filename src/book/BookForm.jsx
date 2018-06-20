@@ -16,7 +16,7 @@ class BookForm extends React.Component {
       autor: props.book ? props.book.autor : '',
       dataPublicacao: props.book ? moment(props.book.dataPublicacao) : moment(),
       // genero: props.book ? props.book.genero : '',
-      // focused: false,
+      focused: false,
     };
   }
 
@@ -45,7 +45,6 @@ class BookForm extends React.Component {
   };
 
   render() {
-    // const { dataPublicacao } = this.state;
     return (
       <div>
         <form onSubmit={this.onSubmit}>
