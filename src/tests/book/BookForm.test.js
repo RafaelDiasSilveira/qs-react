@@ -54,9 +54,6 @@ describe('should set state correctly on input change', () => {
       target: { value: now }
     });
 
-    console.log(wrapper.state('dataPublicacao'));
-    console.log(now);
-
     expect(wrapper.state('dataPublicacao')).toBe(now);
   });
 })
