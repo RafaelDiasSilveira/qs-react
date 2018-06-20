@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`deve renderizar Header corretamente 1`] = `
+exports[`should render Header correctly 1`] = `
 <nav
   className="navbar navbar-expand-lg navbar-dark bg-primary"
 >
@@ -42,7 +42,7 @@ exports[`deve renderizar Header corretamente 1`] = `
           exact={true}
           to="/"
         >
-          Home
+          Estante
         </NavLink>
       </li>
       <li
@@ -69,6 +69,19 @@ exports[`deve renderizar Header corretamente 1`] = `
           to="/books"
         >
           Livros
+        </NavLink>
+      </li>
+      <li
+        activeClassName="active"
+      >
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          exact={true}
+          to="/profile"
+        >
+          Meu Perfil
         </NavLink>
       </li>
     </ul>

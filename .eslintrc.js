@@ -4,4 +4,7 @@ module.exports = {
       "browser": true,
     },
     "parser": "babel-eslint",
+    "rules": {
+      "jsx-a11y/label-has-for": "off"
+    }
 };

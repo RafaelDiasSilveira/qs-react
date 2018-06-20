@@ -24,13 +24,16 @@ const Header = () => (
 
       <ul className="navbar-nav mr-auto">
         <li activeClassName="active">
-          <NavLink className="nav-link" to="/" exact>Home</NavLink>
+          <NavLink className="nav-link" to="/" exact>Estante</NavLink>
         </li>
         <li activeClassName="active">
           <NavLink className="nav-link" to="/users" exact>Usuários</NavLink>
         </li>
         <li activeClassName="active">
           <NavLink className="nav-link" to="/books" exact>Livros</NavLink>
+        </li>
+        <li activeClassName="active">
+          <NavLink className="nav-link" to="/profile" exact>Meu Perfil</NavLink>
         </li>
       </ul>
 

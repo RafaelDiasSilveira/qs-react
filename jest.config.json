@@ -13,7 +13,8 @@
     "**/src/**/*.{js,jsx}",
     "!**/src/**/app.{js,jsx}",
     "!**/node_modules/**",
-    "!**/public/**"
+    "!**/public/**",
+    "!**/tests/**"
   ],
   "coverageReporters": [
     "lcov",
