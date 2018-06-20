@@ -5,18 +5,28 @@ exports[`should render BookForm correctly with data 1`] = `
   <form
     onSubmit={[Function]}
   >
-    <input
-      onChange={[Function]}
-      placeholder="Titulo"
-      type="text"
-      value="Livro 1"
-    />
-    <input
-      onChange={[Function]}
-      placeholder="Autor"
-      type="text"
-      value="Autor 1"
-    />
+    <div
+      className="form-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        placeholder="Titulo"
+        type="text"
+        value="Livro 1"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        placeholder="Autor"
+        type="text"
+        value="Autor 1"
+      />
+    </div>
   </form>
 </div>
 `;
@@ -26,18 +36,28 @@ exports[`should render BookForm correctly without data 1`] = `
   <form
     onSubmit={[Function]}
   >
-    <input
-      onChange={[Function]}
-      placeholder="Titulo"
-      type="text"
-      value=""
-    />
-    <input
-      onChange={[Function]}
-      placeholder="Autor"
-      type="text"
-      value=""
-    />
+    <div
+      className="form-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        placeholder="Titulo"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        placeholder="Autor"
+        type="text"
+        value=""
+      />
+    </div>
   </form>
 </div>
 `;

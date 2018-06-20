@@ -15,6 +15,9 @@ module.exports = (env) => {
     resolve: {
       extensions: ['.js', '.jsx'],
     },
+    plugins: [
+      CSSExtract,
+    ],
     module: {
       rules: [
         {
@@ -33,6 +36,8 @@ module.exports = (env) => {
         },
         {
           test: /\.s?css$/,
+          use: ['style-loader', 'css-loader', 'sass-loader'],
+          /*
           use: [
             MiniCssExtractPlugin.loader,
             {
@@ -48,12 +53,10 @@ module.exports = (env) => {
               },
             },
           ],
+          */
         },
       ],
     },
-    plugins: [
-      CSSExtract,
-    ],
     devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
