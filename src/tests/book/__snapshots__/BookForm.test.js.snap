@@ -51,10 +51,13 @@ exports[`should render BookForm correctly with data 1`] = `
         <select
           className="form-control"
           id="generoSelect"
+          onChange={[Function]}
+          value="EPOPEIA"
         >
           <option
-            defaultValue={true}
             disabled={true}
+            selected={true}
+            value=""
           >
              -- selecione uma opção -- 
           </option>
@@ -159,10 +162,13 @@ exports[`should render BookForm correctly without data 1`] = `
         <select
           className="form-control"
           id="generoSelect"
+          onChange={[Function]}
+          value=""
         >
           <option
-            defaultValue={true}
             disabled={true}
+            selected={true}
+            value=""
           >
              -- selecione uma opção -- 
           </option>

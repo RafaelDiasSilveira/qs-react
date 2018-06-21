@@ -11,11 +11,11 @@ class BookForm extends React.Component {
     super(props);
 
     this.state = {
-      // codigo: props.book ? props.book.codigo : '',
       titulo: props.book ? props.book.titulo : '',
       autor: props.book ? props.book.autor : '',
       dataPublicacao: props.book ? props.book.dataPublicacao : '',
       genero: props.book ? props.book.genero : '',
+      error: '',
     };
   }
 
@@ -39,24 +39,37 @@ class BookForm extends React.Component {
     this.setState(() => ({ genero }));
   }
 
-  onFocusChange = ({ focused }) => {
-    this.setState(() => ({ focused }));
-  }
-
   onSubmit = (e) => {
     e.preventDefault();
 
-    this.props.onSubmit({
-      titulo: this.state.titulo,
-      autor: this.state.autor,
-      dataPublicacao: this.state.dataPublicacao,
-      genero: this.state.genero,
-    });
+    let error;
+
+    if (!this.state.titulo) {
+      error = 'Título inválido';
+      this.setState(() => ({ error }));
+    } else {
+      this.props.onSubmit({
+        titulo: this.state.titulo,
+        autor: this.state.autor,
+        dataPublicacao: this.state.dataPublicacao,
+        genero: this.state.genero,
+      });
+    }
   };
 
   render() {
     return (
       <div>
+
+        { this.state.error &&
+          (
+            <div className="alert alert-danger" role="alert">
+              Erros encontrado:
+              {this.state.error}
+            </div>
+          )
+        }
+
         <form onSubmit={this.onSubmit}>
 
           <div className="form-row">

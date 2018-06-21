@@ -5,11 +5,20 @@ import moment from 'moment';
 import BookForm from '../../book/BookForm';
 import { books } from "../fixtures/fixtures";
 
+let wrapper, onSubmit;
+
+beforeAll(() => {
+  onSubmit = jest.fn;
+  wrapper = shallow(<BookForm onSubmit={onSubmit} />);
+
+});
+
 describe('should render BookForm correctly', () => {
   test('with data', () => {
     const wrapper = shallow(
       <BookForm
         book={books[0]}
+        onSubmit={onSubmit}
       />
     );
 
@@ -17,8 +26,6 @@ describe('should render BookForm correctly', () => {
   });
 
   test('without data', () => {
-    const wrapper = shallow(<BookForm />);
-
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -26,7 +33,6 @@ describe('should render BookForm correctly', () => {
 describe('should set state correctly on input change', () => {
   test('when setting titulo input', () => {
     const value = 'Teste do GG';
-    const wrapper = shallow(<BookForm />);
 
     wrapper.find('input').at(0).simulate('change', {
       target: { value }
@@ -37,7 +43,6 @@ describe('should set state correctly on input change', () => {
 
   test('when setting autor input', () => {
     const value = 'Teste do GG';
-    const wrapper = shallow(<BookForm />);
 
     wrapper.find('input').at(1).simulate('change', {
       target: { value }
@@ -47,7 +52,6 @@ describe('should set state correctly on input change', () => {
   });
 
   test('when setting dataPublicacao input', () => {
-    const wrapper = shallow(<BookForm />);
     const now = moment("2018-12-25");
 
     wrapper.find('input').at(2).simulate('change', {
@@ -55,6 +59,16 @@ describe('should set state correctly on input change', () => {
     });
 
     expect(wrapper.state('dataPublicacao')).toBe(now);
+  });
+
+  test('when setting genero input', () => {
+    const genero = 'romance';
+
+    wrapper.find('select').at(0).simulate('change', {
+      target: { value: genero }
+    });
+
+    expect(wrapper.state('genero')).toBe(genero);
   });
 })
 
