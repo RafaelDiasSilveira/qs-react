@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from '../template/Header';
 import Bookcase from '../bookcase/Bookcase';
 
-import BookForm from '../book/BookForm';
+import AddBookPage from '../book/AddBookPage';
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -24,7 +24,7 @@ const AppRouter = () => (
 
               <Route
                 path-="/book/new"
-                component={BookForm}
+                component={AddBookPage}
               />
             </Switch>
 

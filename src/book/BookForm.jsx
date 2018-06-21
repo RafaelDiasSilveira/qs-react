@@ -15,6 +15,7 @@ class BookForm extends React.Component {
       titulo: props.book ? props.book.titulo : '',
       autor: props.book ? props.book.autor : '',
       dataPublicacao: props.book ? props.book.dataPublicacao : '',
+      genero: props.book ? props.book.genero : '',
     };
   }
 
@@ -42,8 +43,15 @@ class BookForm extends React.Component {
     this.setState(() => ({ focused }));
   }
 
-  onSubmit = () => {
+  onSubmit = (e) => {
+    e.preventDefault();
 
+    this.props.onSubmit({
+      titulo: this.state.titulo,
+      autor: this.state.autor,
+      dataPublicacao: this.state.dataPublicacao,
+      genero: this.state.genero,
+    });
   };
 
   render() {
@@ -83,8 +91,10 @@ class BookForm extends React.Component {
               <select
                 id="generoSelect"
                 className="form-control"
+                value={this.state.genero}
+                onChange={this.onGeneroChange}
               >
-                <option disabled defaultValue> -- selecione uma opção -- </option>
+                <option value="" disabled selected> -- selecione uma opção -- </option>
                 <option value="epopeia">EPOPEIA</option>
                 <option value="novela">NOVELA</option>
                 <option value="conto">CONTO</option>
@@ -118,7 +128,9 @@ BookForm.propTypes = {
     titulo: PropTypes.string,
     autor: PropTypes.string,
     dataPublicacao: PropTypes.instanceOf(moment),
+    genero: PropTypes.string,
   }),
+  onSubmit: PropTypes.func.isRequired,
 };
 
 BookForm.defaultProps = {
