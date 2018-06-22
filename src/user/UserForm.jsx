@@ -34,33 +34,33 @@ class UserForm extends React.Component {
     this.setState(() => ({ senha }));
   }
 
-  // onSubmit = (e) => {
-  //   e.preventDefault();
+  onSubmit = (e) => {
+    e.preventDefault();
 
-  //   let validForm = true;
-  //   let errors = [];
+    let validForm = true;
+    let errors = [];
 
-  //   // TODO: Fazer função para validação e função pra remover espaços duplos
-  //   if (!this.state.titulo || this.state.titulo.length >= 20) {
-  //     const error = 'Título inválido';
-  //     errors = errors.concat(error);
-  //   }
+    // TODO: Fazer função para validação e função pra remover espaços duplos
+    if (!this.state.nome || this.state.nome.length >= 20) {
+      const error = 'Nome inválido';
+      errors = errors.concat(error);
+    }
 
-  //   if (errors.length > 0) {
-  //     this.setState(() => ({ errors }));
-  //     validForm = false;
-  //   }
+    if (errors.length > 0) {
+      this.setState(() => ({ errors }));
+      validForm = false;
+    }
 
-  //   if (validForm) {
-  //     this.setState(() => ({ errors: [] }));
-  //     this.props.onSubmit({
-  //       titulo: this.state.titulo,
-  //       autor: this.state.autor,
-  //       dataPublicacao: this.state.dataPublicacao,
-  //       genero: this.state.genero,
-  //     });
-  //   }
-  // };
+    if (validForm) {
+      this.setState(() => ({ errors: [] }));
+      this.props.onSubmit({
+        nome: this.state.nome,
+        apelido: this.state.apelido,
+        telefone: this.state.telefone,
+        senha: this.state.senha,
+      });
+    }
+  };
 
   render() {
     return (
@@ -139,12 +139,12 @@ UserForm.propTypes = {
     telefone: PropTypes.string,
     senha: PropTypes.string,
   }),
-  // onSubmit: PropTypes.func,
+  onSubmit: PropTypes.func,
 };
 
 UserForm.defaultProps = {
   user: undefined,
-  // onSubmit: () => {},
+  onSubmit: () => {},
 };
 
 export default UserForm;
