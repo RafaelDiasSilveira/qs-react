@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render UserForm correctly with data 1`] = `
+<div>
+  <form>
+    <div
+      className="form-row"
+    >
+      <div
+        className="col form-group"
+      >
+        <label>
+          Nome
+        </label>
+        <input
+          className="form-control"
+          onChange={[Function]}
+          placeholder="Nome"
+          type="text"
+          value="Rafael Dias"
+        />
+      </div>
+      <div
+        className="col form-group"
+      >
+        <label>
+          Apelido
+        </label>
+        <input
+          className="form-control"
+          onChange={[Function]}
+          placeholder="Apelido"
+          type="text"
+          value="Capotinho"
+        />
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="col form-group"
+      >
+        <label>
+          Telefone
+        </label>
+        <input
+          className="form-control"
+          onChange={[Function]}
+          placeholder="(XX) XXXXX-XXXX"
+          type="text"
+          value="(61) 98245-1511"
+        />
+      </div>
+      <div
+        className="col form-group"
+      >
+        <label>
+          Senha
+        </label>
+        <input
+          className="form-control"
+          onChange={[Function]}
+          type="password"
+          value="senhaSecreta"
+        />
+      </div>
+    </div>
+    <button
+      className="btn btn-success btn-lg btn-block"
+    >
+      Cadastrar-se
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should render UserForm correctly without data 1`] = `
+<div>
+  <form>
+    <div
+      className="form-row"
+    >
+      <div
+        className="col form-group"
+      >
+        <label>
+          Nome
+        </label>
+        <input
+          className="form-control"
+          onChange={[Function]}
+          placeholder="Nome"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="col form-group"
+      >
+        <label>
+          Apelido
+        </label>
+        <input
+          className="form-control"
+          onChange={[Function]}
+          placeholder="Apelido"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="col form-group"
+      >
+        <label>
+          Telefone
+        </label>
+        <input
+          className="form-control"
+          onChange={[Function]}
+          placeholder="(XX) XXXXX-XXXX"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="col form-group"
+      >
+        <label>
+          Senha
+        </label>
+        <input
+          className="form-control"
+          onChange={[Function]}
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+    <button
+      className="btn btn-success btn-lg btn-block"
+    >
+      Cadastrar-se
+    </button>
+  </form>
+</div>
+`;

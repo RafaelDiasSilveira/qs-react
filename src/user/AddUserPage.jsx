@@ -1,12 +1,13 @@
 import React from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import { addUser } from './UserAction';
 import UserForm from './UserForm';
 
-class AddUserPage extends React.Component {
-  addBook = (book) => {
-    this.props.onSubmit(book);
+export class AddUserPage extends React.Component {
+  addUser = (user) => {
+    this.props.onSubmit(user);
     this.props.history.push('/');
   }
 
@@ -14,15 +15,17 @@ class AddUserPage extends React.Component {
     return (
       <div>
         <h2 className="text-center">Criar usuário</h2>
-        <UserForm />
+        <UserForm
+          onSubmit={this.addUser}
+        />
       </div>
     );
   }
 }
 
-// const mapDispatchToProps = dispatch => ({
-//   onSubmit: book => dispatch(addBook(book)),
-// });
+const mapDispatchToProps = dispatch => ({
+  onSubmit: user => dispatch(addUser(user)),
+});
 
 AddUserPage.propTypes = {
   onSubmit: PropTypes.func.isRequired,
@@ -31,4 +34,4 @@ AddUserPage.propTypes = {
   }).isRequired,
 };
 
-export default AddUserPage;
+export default connect(undefined, mapDispatchToProps)(AddUserPage);

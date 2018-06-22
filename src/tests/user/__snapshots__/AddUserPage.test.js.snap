@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AddUserPage correctly 1`] = `
+<div>
+  <h2
+    className="text-center"
+  >
+    Criar usuário
+  </h2>
+  <UserForm
+    onSubmit={[Function]}
+  />
+</div>
+`;
