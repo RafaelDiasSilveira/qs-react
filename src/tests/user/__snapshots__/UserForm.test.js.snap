@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render BookForm correctly with data 1`] = `
+exports[`should render UserForm correctly with data 1`] = `
 <div>
   <form
     onSubmit={[Function]}
@@ -12,28 +12,28 @@ exports[`should render BookForm correctly with data 1`] = `
         className="col form-group"
       >
         <label>
-          Título
+          Nome
         </label>
         <input
           className="form-control"
           onChange={[Function]}
-          placeholder="Titulo"
+          placeholder="Nome"
           type="text"
-          value="Livro 1"
+          value="Rafael Dias"
         />
       </div>
       <div
         className="col form-group"
       >
         <label>
-          Autor
+          Apelido
         </label>
         <input
           className="form-control"
           onChange={[Function]}
-          placeholder="Autor"
+          placeholder="Apelido"
           type="text"
-          value="Autor 1"
+          value="Capotinho"
         />
       </div>
     </div>
@@ -43,72 +43,41 @@ exports[`should render BookForm correctly with data 1`] = `
       <div
         className="col form-group"
       >
-        <label
-          htmlFor="generoSelect"
-        >
-          Gênero
+        <label>
+          Telefone
         </label>
-        <select
+        <input
           className="form-control"
-          id="generoSelect"
           onChange={[Function]}
-          value="EPOPEIA"
-        >
-          <option
-            value=""
-          >
-             -- selecione uma opção -- 
-          </option>
-          <option
-            value="epopeia"
-          >
-            EPOPEIA
-          </option>
-          <option
-            value="novela"
-          >
-            NOVELA
-          </option>
-          <option
-            value="conto"
-          >
-            CONTO
-          </option>
-          <option
-            value="ensaio"
-          >
-            ENSAIO
-          </option>
-          <option
-            value="romance"
-          >
-            ROMANCE
-          </option>
-        </select>
+          placeholder="(XX) XXXXX-XXXX"
+          type="text"
+          value="(61) 98245-1511"
+        />
       </div>
       <div
         className="col form-group"
       >
         <label>
-          Data de Publicação
+          Senha
         </label>
         <input
           className="form-control"
           onChange={[Function]}
-          type="date"
+          type="password"
+          value="senhaSecreta"
         />
       </div>
     </div>
     <button
       className="btn btn-success btn-lg btn-block"
     >
-      Adicionar Livro
+      Cadastrar-se
     </button>
   </form>
 </div>
 `;
 
-exports[`should render BookForm correctly without data 1`] = `
+exports[`should render UserForm correctly without data 1`] = `
 <div>
   <form
     onSubmit={[Function]}
@@ -120,12 +89,12 @@ exports[`should render BookForm correctly without data 1`] = `
         className="col form-group"
       >
         <label>
-          Título
+          Nome
         </label>
         <input
           className="form-control"
           onChange={[Function]}
-          placeholder="Titulo"
+          placeholder="Nome"
           type="text"
           value=""
         />
@@ -134,12 +103,12 @@ exports[`should render BookForm correctly without data 1`] = `
         className="col form-group"
       >
         <label>
-          Autor
+          Apelido
         </label>
         <input
           className="form-control"
           onChange={[Function]}
-          placeholder="Autor"
+          placeholder="Apelido"
           type="text"
           value=""
         />
@@ -151,59 +120,27 @@ exports[`should render BookForm correctly without data 1`] = `
       <div
         className="col form-group"
       >
-        <label
-          htmlFor="generoSelect"
-        >
-          Gênero
+        <label>
+          Telefone
         </label>
-        <select
+        <input
           className="form-control"
-          id="generoSelect"
           onChange={[Function]}
+          placeholder="(XX) XXXXX-XXXX"
+          type="text"
           value=""
-        >
-          <option
-            value=""
-          >
-             -- selecione uma opção -- 
-          </option>
-          <option
-            value="epopeia"
-          >
-            EPOPEIA
-          </option>
-          <option
-            value="novela"
-          >
-            NOVELA
-          </option>
-          <option
-            value="conto"
-          >
-            CONTO
-          </option>
-          <option
-            value="ensaio"
-          >
-            ENSAIO
-          </option>
-          <option
-            value="romance"
-          >
-            ROMANCE
-          </option>
-        </select>
+        />
       </div>
       <div
         className="col form-group"
       >
         <label>
-          Data de Publicação
+          Senha
         </label>
         <input
           className="form-control"
           onChange={[Function]}
-          type="date"
+          type="password"
           value=""
         />
       </div>
@@ -211,7 +148,7 @@ exports[`should render BookForm correctly without data 1`] = `
     <button
       className="btn btn-success btn-lg btn-block"
     >
-      Adicionar Livro
+      Cadastrar-se
     </button>
   </form>
 </div>

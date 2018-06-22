@@ -32,35 +32,29 @@ exports[`should render Header correctly 1`] = `
     <ul
       className="navbar-nav mr-auto"
     >
-      <li
-        activeClassName="active"
-      >
+      <li>
         <NavLink
           activeClassName="active"
           aria-current="page"
           className="nav-link"
           exact={true}
-          to="/"
+          to="/bookcase"
         >
           Estante
         </NavLink>
       </li>
-      <li
-        activeClassName="active"
-      >
+      <li>
         <NavLink
           activeClassName="active"
           aria-current="page"
           className="nav-link"
           exact={true}
-          to="/users"
+          to="/user/new"
         >
           Usuários
         </NavLink>
       </li>
-      <li
-        activeClassName="active"
-      >
+      <li>
         <NavLink
           activeClassName="active"
           aria-current="page"
@@ -71,9 +65,7 @@ exports[`should render Header correctly 1`] = `
           Livros
         </NavLink>
       </li>
-      <li
-        activeClassName="active"
-      >
+      <li>
         <NavLink
           activeClassName="active"
           aria-current="page"

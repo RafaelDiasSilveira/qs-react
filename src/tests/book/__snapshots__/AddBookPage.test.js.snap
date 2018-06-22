@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AddBookPage correctly 1`] = `
+<div>
+  <h2
+    className="text-center"
+  >
+    Adicionar livro
+  </h2>
+  <BookForm
+    onSubmit={[Function]}
+  />
+</div>
+`;

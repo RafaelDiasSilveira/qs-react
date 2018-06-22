@@ -1,13 +1,13 @@
 import { createStore, combineReducers } from 'redux';
-
-// import expensesReducer from '../reducers/expenses';
-// import filterReducer from '../reducers/filters';
+import bookReducers from '../book/BookReducers';
+import userReducers from '../user/UserReducers';
 
 export default () => {
   // Store creation
   const store = createStore(
     combineReducers({
-      // expenses: expensesReducer,
+      books: bookReducers,
+      users: userReducers,
       // filters: filterReducer,
     }),
     /* eslint-disable no-underscore-dangle */

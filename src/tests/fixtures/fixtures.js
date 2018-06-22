@@ -22,3 +22,11 @@ export const books = [
   },
 ]
 
+export const users = [
+  {
+    nome: 'Rafael Dias',
+    apelido: 'Capotinho',
+    telefone: '(61) 98245-1511',
+    senha: 'senhaSecreta',
+  }
+]

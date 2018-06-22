@@ -4,7 +4,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from '../template/Header';
 import Bookcase from '../bookcase/Bookcase';
 
-import BookForm from '../book/BookForm';
+import AddBookPage from '../book/AddBookPage';
+import AddUserPage from '../user/AddUserPage';
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -17,15 +18,24 @@ const AppRouter = () => (
 
             <Switch>
               <Route
-                path="/"
+                path="/bookcase"
                 component={Bookcase}
                 exact
               />
 
               <Route
-                path-="/book/new"
-                component={BookForm}
+                path="/book/new"
+                component={AddBookPage}
+                exact
               />
+
+              <Route
+                path="/user/new"
+                component={AddUserPage}
+                exact
+              />
+
+              <Route component={Bookcase} />
             </Switch>
 
           </div>
