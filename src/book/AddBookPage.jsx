@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { addBook } from './BookAction';
 import BookForm from './BookForm';
 
-class AddBookPage extends React.Component {
+export class AddBookPage extends React.Component {
   addBook = (book) => {
     this.props.onSubmit(book);
     this.props.history.push('/');
@@ -14,7 +14,7 @@ class AddBookPage extends React.Component {
   render() {
     return (
       <div>
-        <h2>Adicionar livro</h2>
+        <h2 className="text-center">Adicionar livro</h2>
         <BookForm
           onSubmit={this.addBook}
         />

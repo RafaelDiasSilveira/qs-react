@@ -55,8 +55,6 @@ exports[`should render BookForm correctly with data 1`] = `
           value="EPOPEIA"
         >
           <option
-            disabled={true}
-            selected={true}
             value=""
           >
              -- selecione uma opção -- 
@@ -96,7 +94,6 @@ exports[`should render BookForm correctly with data 1`] = `
         </label>
         <input
           className="form-control"
-          defaultValue="31/12/18"
           onChange={[Function]}
           type="date"
         />
@@ -166,8 +163,6 @@ exports[`should render BookForm correctly without data 1`] = `
           value=""
         >
           <option
-            disabled={true}
-            selected={true}
             value=""
           >
              -- selecione uma opção -- 
@@ -207,7 +202,6 @@ exports[`should render BookForm correctly without data 1`] = `
         </label>
         <input
           className="form-control"
-          defaultValue="31/12/18"
           onChange={[Function]}
           type="date"
           value=""

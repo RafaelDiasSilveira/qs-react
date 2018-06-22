@@ -1,11 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import moment from 'moment';
-
-import 'react-dates/initialize';
-// import { SingleDatePicker } from 'react-dates';
-
 class BookForm extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +10,7 @@ class BookForm extends React.Component {
       autor: props.book ? props.book.autor : '',
       dataPublicacao: props.book ? props.book.dataPublicacao : '',
       genero: props.book ? props.book.genero : '',
-      error: '',
+      errors: [],
     };
   }
 
@@ -42,12 +37,22 @@ class BookForm extends React.Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    let error;
+    let validForm = true;
+    let errors = [];
 
-    if (!this.state.titulo) {
-      error = 'Título inválido';
-      this.setState(() => ({ error }));
-    } else {
+    // TODO: Fazer função para validação e função pra remover espaços duplos
+    if (!this.state.titulo || this.state.titulo.length >= 20) {
+      const error = 'Título inválido';
+      errors = errors.concat(error);
+    }
+
+    if (errors.length > 0) {
+      this.setState(() => ({ errors }));
+      validForm = false;
+    }
+
+    if (validForm) {
+      this.setState(() => ({ errors: [] }));
       this.props.onSubmit({
         titulo: this.state.titulo,
         autor: this.state.autor,
@@ -61,11 +66,11 @@ class BookForm extends React.Component {
     return (
       <div>
 
-        { this.state.error &&
+        { this.state.errors.length > 0 &&
           (
             <div className="alert alert-danger" role="alert">
               Erros encontrado:
-              {this.state.error}
+              {this.state.errors}
             </div>
           )
         }
@@ -107,7 +112,7 @@ class BookForm extends React.Component {
                 value={this.state.genero}
                 onChange={this.onGeneroChange}
               >
-                <option value="" disabled selected> -- selecione uma opção -- </option>
+                <option value=""> -- selecione uma opção -- </option>
                 <option value="epopeia">EPOPEIA</option>
                 <option value="novela">NOVELA</option>
                 <option value="conto">CONTO</option>
@@ -123,7 +128,6 @@ class BookForm extends React.Component {
                 className="form-control"
                 value={this.state.dataPublicacao}
                 onChange={this.onDateChange}
-                defaultValue="31/12/18"
               />
             </div>
           </div>
@@ -140,14 +144,15 @@ BookForm.propTypes = {
   book: PropTypes.shape({
     titulo: PropTypes.string,
     autor: PropTypes.string,
-    dataPublicacao: PropTypes.instanceOf(moment),
+    dataPublicacao: PropTypes.string,
     genero: PropTypes.string,
   }),
-  onSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func,
 };
 
 BookForm.defaultProps = {
   book: undefined,
+  onSubmit: () => {},
 };
 
 export default BookForm;

@@ -23,16 +23,16 @@ const Header = () => (
     <div className="collapse navbar-collapse" id="navbarText">
 
       <ul className="navbar-nav mr-auto">
-        <li activeClassName="active">
-          <NavLink className="nav-link" to="/" exact>Estante</NavLink>
+        <li>
+          <NavLink className="nav-link" to="/bookcase" exact>Estante</NavLink>
         </li>
-        <li activeClassName="active">
-          <NavLink className="nav-link" to="/users" exact>Usuários</NavLink>
+        <li>
+          <NavLink className="nav-link" to="/user/new" exact>Usuários</NavLink>
         </li>
-        <li activeClassName="active">
+        <li>
           <NavLink className="nav-link" to="/books" exact>Livros</NavLink>
         </li>
-        <li activeClassName="active">
+        <li>
           <NavLink className="nav-link" to="/profile" exact>Meu Perfil</NavLink>
         </li>
       </ul>
