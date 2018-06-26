@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 // import { login } from '../utils/auth';
 
@@ -85,8 +85,4 @@ LoginForm.defaultProps = {
   onSubmit: () => {},
 };
 
-const mapStateToProps = () => {
-
-};
-
-export default connect(undefined, mapStateToProps)(LoginForm);
+export default (LoginForm);

@@ -7,6 +7,7 @@ import Bookcase from '../bookcase/Bookcase';
 
 import AddBookPage from '../book/AddBookPage';
 import AddUserPage from '../user/AddUserPage';
+import LoginPage from '../user/LoginPage';
 
 import { currentUser } from '../utils/auth';
 
@@ -23,6 +24,12 @@ const AppRouter = () => (
               <Route
                 path="/user/new"
                 component={AddUserPage}
+                exact
+              />
+
+              <Route
+                path="/login"
+                component={LoginPage}
                 exact
               />
 
@@ -57,7 +64,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
       ) : (
         <Redirect
           to={{
-            pathname: '/user/new',
+            pathname: '/login',
           }}
         />
       ))
