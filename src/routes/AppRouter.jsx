@@ -21,14 +21,14 @@ const AppRouter = () => (
 
             <Switch>
               <Route
-                path="/bookcase"
-                component={Bookcase}
+                path="/user/new"
+                component={AddUserPage}
                 exact
               />
 
-              <Route
-                path="/user/new"
-                component={AddUserPage}
+              <PrivateRoute
+                path="/bookcase"
+                component={Bookcase}
                 exact
               />
 

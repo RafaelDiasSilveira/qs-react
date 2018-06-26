@@ -77,51 +77,47 @@ class UserForm extends React.Component {
 
         <form onSubmit={this.onSubmit}>
 
-          <div className="form-row">
-            <div className="col form-group">
-              <label>Nome</label>
-              <input
-                type="text"
-                placeholder="Nome"
-                value={this.state.nome}
-                onChange={this.onNomeChange}
-                className="form-control"
-              />
-            </div>
-
-            <div className="col form-group">
-              <label>Apelido</label>
-              <input
-                type="text"
-                placeholder="Apelido"
-                value={this.state.apelido}
-                onChange={this.onApelidoChange}
-                className="form-control"
-              />
-            </div>
+          <div className="form-group">
+            <label>Nome</label>
+            <input
+              type="text"
+              placeholder="Nome"
+              value={this.state.nome}
+              onChange={this.onNomeChange}
+              className="form-control"
+            />
           </div>
 
-          <div className="form-row">
-            <div className="col form-group">
-              <label>Telefone</label>
-              <input
-                type="text"
-                placeholder="(XX) XXXXX-XXXX"
-                className="form-control"
-                value={this.state.telefone}
-                onChange={this.onTelefoneChange}
-              />
-            </div>
+          <div className="form-group">
+            <label>Apelido</label>
+            <input
+              type="text"
+              placeholder="Apelido"
+              value={this.state.apelido}
+              onChange={this.onApelidoChange}
+              className="form-control"
+            />
+          </div>
 
-            <div className="col form-group">
-              <label>Senha</label>
-              <input
-                type="password"
-                className="form-control"
-                value={this.state.senha}
-                onChange={this.onSenhaChange}
-              />
-            </div>
+          <div className="form-group">
+            <label>Telefone</label>
+            <input
+              type="text"
+              placeholder="(XX) XXXXX-XXXX"
+              className="form-control"
+              value={this.state.telefone}
+              onChange={this.onTelefoneChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Senha</label>
+            <input
+              type="password"
+              className="form-control"
+              value={this.state.senha}
+              onChange={this.onSenhaChange}
+            />
           </div>
 
           <button className="btn btn-success btn-lg btn-block">Cadastrar-se</button>
