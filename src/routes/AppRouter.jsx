@@ -37,7 +37,7 @@ const AppRouter = () => (
                 component={AddBookPage}
               />
 
-              <Route component={Bookcase} />
+              <PrivateRoute component={Bookcase} />
             </Switch>
 
           </div>

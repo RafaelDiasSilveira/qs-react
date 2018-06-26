@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render LoginForm correctly with data 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group"
+    >
+      <label>
+        Apelido
+      </label>
+      <input
+        className="form-control"
+        onChange={[Function]}
+        placeholder="Apelido"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label>
+        Senha
+      </label>
+      <input
+        className="form-control"
+        onChange={[Function]}
+        type="password"
+        value=""
+      />
+    </div>
+    <button
+      className="btn btn-success btn-lg btn-block"
+    >
+      Login
+    </button>
+  </form>
+</div>
+`;
